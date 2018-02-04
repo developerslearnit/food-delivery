@@ -1,0 +1,92 @@
+<div class="animated fadeIn">
+
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4 style="margin:7px 0 0 0" class="card-title">
+                        Restaurants
+                    </h4>
+                </div>
+                <div class="col-md-2 ml-md-auto">
+              
+                </div>
+            </div>
+        </div>
+        <div class="card-block">
+
+            <div class="row">
+                <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group row">
+                        <label for="" class="col-md-2 col-form-label">
+                            Restaurant Name
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" [(ngModel)]="data.restaurantName" name="restaurantName">
+                        </div>
+
+                        <label for="" class="col-md-2 col-form-label">
+                                Address
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text"  [(ngModel)]="data.address" name="address">
+                            </div>
+                    </div>
+
+                    
+                            <div class="form-group row">
+                                <label for="" class="col-md-2 col-form-label">
+                                    Min Order
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text"  [(ngModel)]="data.minOrder" name="minOrder">
+                                </div>
+        
+                                <label for="" class="col-md-2 col-form-label">
+                                        Delivery Fee
+                                    </label>
+                                    <div class="col-md-4">
+                                        <input type="text"  [(ngModel)]="data.delFee" name="delFee">
+                                    </div>
+                            </div>
+                            <div class="form-group row">
+                                <button  (click)="saveRestaurant()" class="btn btn-primary">
+                                    Save
+                                </button>
+                            </div>
+                
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Delivery Fee</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let rest of restaurants">
+                        <td>
+                                {{rest.name}}
+                        </td>
+                        <td>
+                                {{rest.deliveryFee}}
+                        </td>
+                        <td>
+                                {{rest.address}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+          
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
